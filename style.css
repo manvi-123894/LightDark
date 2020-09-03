@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+
+:root{
+   --primary-text-color : #00B0FF;
+   --background : #fff;
+   --on-background : #fff;
+   --box-shadow: 1px 1px 10px 1px rgb(163, 163, 163);
+   --nav-background :rgba(255, 255, 255,0.5);
+   --text-shadow: 1px 1px 0 black;
+   --list-background : rgba(255, 255, 255,0.9);
+   --nav-color: rgb(0,0,0);
+   --button-border : 1px solid black;
+}
+
+[data-theme="dark"]{
+  --primary-text-color :#F50057;
+   --background : rgb(19, 19, 19);
+   --on-background : rgb(253, 193, 203);
+   /* --box-shadow: 0px 1px 5px 1px rgb(255, 255, 255); */
+   --box-shadow: none;
+   --nav-background :rgba(0, 0, 0, 0.5);
+   --text-shadow: 1px 1px 0 #fff;
+   --list-background : rgba(255, 255, 255,0.9);
+   --nav-color: rgb(223,223,223);
+   --button-border : 1px solid rgb(255,255,255);
+}
+
+  
+html{ 
+  scroll-behavior: smooth; 
+} 
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  background-color: var(--background) ;
+  color: var(--on-background);
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2V0h2v20h2v2H20v-1.5zM0 20h2v20H0V20zm4 0h2v20H4V20zm4 0h2v20H8V20zm4 0h2v20h-2V20zm4 0h2v20h-2V20zm4 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2z' fill='%239C92AC' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+nav{
+  width: 100vw;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family:  sans-serif;
+  background-color: var(--nav-background) ;
+}
+
+
+
+
+.nav-box{
+  position: absolute;
+  left: 10px;
+  display: none;
+}
+
+nav .box{
+  width: 40px;
+  height: 5px;
+  background-color: var(--primary-text-color);
+  margin: 5px 0;
+  
+}
+
+nav .toggle{
+  width: fit-content;
+  position: absolute;
+  right: 20px;
+}
+
+nav .toggle .btn-class button{
+  font-size: 1em;
+  margin: 0 10px;
+  padding: 5px;
+  font-weight: bold;
+  color: var(--primary-text-color);
+  background: transparent;
+  border: var(--button-border);
+  border-radius: 5px;
+  outline: none;
+}
+
+
+a{
+  text-decoration: none;
+  margin: 0 10px;
+  color: var(--nav-color);
+  font-weight: bold;
+}
+
+a:hover, 
+a:focus{
+  color: var(--primary-text-color);
+}
+
+#home{
+  width: 100vw;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  top: 75px;
+}
+
+
+#about, #service, #contact{
+      width: 100vw;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 25px 0 30px;
+}
+
+h1{
+  font-family: 'Kaushan Script', cursive;
+  font-size: 3em;
+  color: var(--primary-text-color);
+  text-shadow: var(--text-shadow);
+}
+
+
+
+#home h2{
+  font-size: 2em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#about .about-text{
+    color: black;
+    width: 50vw;
+    height: fit-content;
+    border: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding:25px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    background-color: var(--on-background);
+}
+
+#service .service-box{
+        width: 95vw;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+}
+
+#service .service-box .box{
+  padding: 10px;
+  width: 25vw;
+  color: black;
+  border-radius: 10px;
+  height: fit-content;
+  background-color: var(--on-background);
+  text-align: center;
+  box-shadow: var(--box-shadow);
+}
+
+
+#service .service-box .box img{
+  width: 175px;
+  height: 250px;
+  border-radius: 30%;
+}
+
+#service .service-box .box h3{
+  font-family: sans-serif;
+}
+
+
+
+#contact .icons{
+  width: 50vw;
+  margin: 0px 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.fa{
+  color: var(--primary-text-color);
+  font-size: 3em;
+}
+
+
+
+@media screen and (max-width:992px){
+  .nav-box{
+    display: inline;
+  }
+
+  .nav-list{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: var(--list-background) ;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 0;
+    display: none;
+}
+.nav-toggle{
+  display: inline-block; 
+  display: flex;
+  flex-direction: column; 
+  height: fit-content;
+  width: 100vw;
+}
+
+
+
+  #service .service-box{
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  #service .service-box .box{
+    width: 75vw;
+    margin: 15px 0;
+  }
+
+  #about .about-text{
+    width: 75vw;
+  }
+
+  #contact .icons{
+    width: 100vw;
+   
+  }
+  
+}
+
+
+@media screen and (max-width:576px){
+
+  #service .service-box .box{
+    width: 95vw;
+    margin: 15px 0;
+  }
+
+  #about .about-text{
+    width: 95vw;
+    padding:5px;   
+  }
+  .fa{
+    color: var(--primary-text-color);
+    font-size: 2.5em;
+  }
+
+  h1{
+    font-size: 2em;
+  }
+  nav .toggle{
+    right: 5px;
+  }
+
+  .btn-class{
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav .toggle .btn-class button{
+    margin: 5px 2px;
+  }
+}
+
+
+@media screen and (max-width:367px){
+  .fa{
+    color: var(--primary-text-color);
+    font-size: 2em;
+  }
+}
