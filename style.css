@@ -213,7 +213,7 @@ h1{
 
   .nav-list{
     position: absolute;
-    top: 50px;
+    top: 100px;
     left: 0;
     background-color: var(--list-background) ;
     display: flex;
